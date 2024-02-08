@@ -1,11 +1,14 @@
 # CROP-PRICE-PREDICTION
-It is a ML project to predict the Crop price based on some features.
+It is a ML project to predict the Crop yield based on some features.
 
-Goal: Use machine learning to predict future prices of a specific crop in a particular timeframe and location.
+Goal: The goal of crop yield prediction is to forecast the expected output or production of crops within a specific region or area over a defined period.
 
 Steps:
-Define scope: Choose a crop, season, and location.
-Data collection: Downloading a dataset from kaggle with relevant factors.
-Data preprocessing: Clean, format, and engineer features from collected data.
-Model selection and training: Choose and train suitable ML models.
-Model evaluation and deployment: Evaluate on unseen data, consider interpretability and efficiency, and deploy for prediction use.
+Data Collection : Gathering various types of information related to crops.
+     Data Preprocessing : Getting the data ready for analysis by cleaning and organizing.
+     Feature Selection : Streamline the data and focus on the most important factors.
+     Model Selection : Select a right machine learning algorithm to predict crop yield.
+     Model Training : Training the Selected model based on your data.
+     Model Evaluation : Evaluation is about checking how well your trained model performs.
+     Deployment : Putting your prediction tool to work in the real world.
+     Maintenance : Maintaining the model.
