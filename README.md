@@ -1,4 +1,4 @@
-# CROP-PRICE-PREDICTION
+# CROP-YIELD-PREDICTION
 It is a ML project to predict the Crop yield based on some features.
 
 Goal: The goal of crop yield prediction is to forecast the expected output or production of crops within a specific region or area over a defined period.
