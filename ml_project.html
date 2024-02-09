@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('ml_image.png'); /* Gradient overlay */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Add transparency to make text more readable */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Yield Prediction</h1>
+        <label for="year">Year:</label>
+        <input type="number" id="year" placeholder="Enter year">
+
+        <label for="area">Area (in hectares):</label>
+        <input type="number" id="area" placeholder="Enter area">
+
+        <label for="cropType">Crop Type:</label>
+        <select id="cropType">
+            <option value="Rice">Rice</option>
+            <option value="Wheat">Wheat</option>
+            <option value="Maize">Maize</option>
+            <option value="Sugarcane">Sugarcane</option>
+            <option value="Potato">Potato</option>
+            <option value="Coconut">Coconut</option>
+        </select>
+
+        <label>Season:</label><br>
+        <input type="checkbox" id="season_rabi"> <label for="season_rabi">Rabi</label>
+        <input type="checkbox" id="season_kharif"> <label for="season_kharif">Kharif</label>
+        <input type="checkbox" id="season_summer"> <label for="season_summer">Summer</label>
+        <input type="checkbox" id="season_whole_year"> <label for="season_whole_year">Whole Year</label>
+
+        <button onclick="predictYield()">Predict Yield</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function predictYield() {
+            // Get input values
+            var year = document.getElementById("year").value;
+            var area = parseFloat(document.getElementById("area").value);
+            var cropType = document.getElementById("cropType").value;
+            var season_rabi = document.getElementById("season_rabi").checked;
+            var season_kharif = document.getElementById("season_kharif").checked;
+            var season_summer = document.getElementById("season_summer").checked;
+            var season_whole_year = document.getElementById("season_whole_year").checked;
+
+            // Perform prediction (this is just a placeholder)
+            // Replace this with your actual prediction logic using backend code
+            var predictedYield = Math.round(Math.random() * 100); // Placeholder prediction
+
+            // Display the predicted yield
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "<strong>Predicted Yield for " + cropType + " in " + year + ":</strong> " + predictedYield + " tons";
+        }
+    </script>
+</body>
+</html>
+
